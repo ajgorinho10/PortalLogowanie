@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\data\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:data\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\data\\passcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:data\\passcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Data\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\ApiResponse.cs",
+              "RelativeToolTip": "Data\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T21:39:24.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PassCheck.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\PassCheck.cs",
+              "RelativeDocumentMoniker": "Data\\PassCheck.cs",
+              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\PassCheck.cs",
+              "RelativeToolTip": "Data\\PassCheck.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T21:03:15.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T20:21:32.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\User.cs",
+              "RelativeDocumentMoniker": "Data\\User.cs",
+              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Data\\User.cs",
+              "RelativeToolTip": "Data\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T20:21:08.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:57:36.044Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
