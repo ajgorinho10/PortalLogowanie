@@ -1,4 +1,6 @@
-﻿namespace PortalAPI.Data
+﻿using System.Text.Json;
+
+namespace PortalAPI.Data
 {
     public class ApiResponse<T>
     {
@@ -11,6 +13,12 @@
             Success = success;
             Message = message;
             Data = data;
+        }
+
+        override
+        public string ToString()
+        {
+            return JsonSerializer.Serialize(this);
         }
     }
 }

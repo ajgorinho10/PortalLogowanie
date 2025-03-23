@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using PortalAPI.Data;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 
@@ -13,12 +15,15 @@ namespace PortalAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IConfiguration _config;
 
-        public UserController(AppDbContext context)
+        public UserController(AppDbContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -27,6 +32,7 @@ namespace PortalAPI.Controllers
             return Ok(new ApiResponse<List<PortalAPI.Data.User>>(true, "", data));
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -75,22 +81,23 @@ namespace PortalAPI.Controllers
         }
 
         [HttpPost("/[controller]/login")] 
-        public async Task<ActionResult<User>> loggin(User user)
+        public async Task<ActionResult<String>> loggin(User user)
         {
             var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Login == user.Login);
             if (existingUser == null)
             {
-                return Ok(new ApiResponse<User>(false, "Błędny login lub hasło", null));
+                return Ok(new ApiResponse<String>(false, "Błędny login lub hasło", null));
             }
             else
             {
                 if(PassCheck.VerifyPassword(user.Password, existingUser.Password))
                 {
-                    return Ok(new ApiResponse<User>(true, "Zalogowano", user));
+                    var token = Token.GenerateToken(user,_config);
+                    return Ok(new ApiResponse<String>(true, "Zalogowano", token));
                 }
                 else
                 {
-                    return Ok(new ApiResponse<User>(false, "Błędny login lub hasło", null));
+                    return Ok(new ApiResponse<String>(false, "Błędny login lub hasło", null));
                 }
             }
 

@@ -87,7 +87,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PortalAPI.Data.User",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
