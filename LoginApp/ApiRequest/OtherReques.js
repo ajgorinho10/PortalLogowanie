@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "http://10.0.2.2:5273/User";
+const apiUrl = "https://api.fwapi.duckdns.org/User";
 
 export const Request = async ({token}) => {
 

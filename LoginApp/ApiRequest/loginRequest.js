@@ -1,8 +1,9 @@
 import axios from "axios";
+import * as SecureStore from 'expo-secure-store';
 
 export const loginApi = async (username,pass) => {
 
-    const apiUrl = "http://10.0.2.2:5273/User/login";
+    const apiUrl = "https://api.fwapi.duckdns.org/User/login";
 
     try {
       const requestData = {
@@ -20,6 +21,7 @@ export const loginApi = async (username,pass) => {
 
       const odp = response.data;
       if(odp.success === true){
+        await saveApiKey(odp.data,username,pass);
         return odp.data;
       }
       else{
@@ -31,3 +33,9 @@ export const loginApi = async (username,pass) => {
   }
 
 };
+
+async function saveApiKey(apiKey,name,pass) {
+  await SecureStore.setItemAsync('api_key', apiKey, { secure: true });
+  await SecureStore.setItemAsync('login', name, { secure: true });
+  await SecureStore.setItemAsync('password', pass, { secure: true });
+}

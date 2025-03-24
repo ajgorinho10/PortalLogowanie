@@ -1,54 +1,21 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-import {loginApi}from './ApiRequest/loginRequest';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+import LoginScreen from './Screen/LoginScreen';
+import Home from './Screen/Home';
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const Stack = createStackNavigator();
 
-  const [Key, setKey] = useState('');
-
-  const handleLogin = async () => {
-    try{
-      const apiKey = await loginApi(username, password);
-      await setKey[apiKey];
-
-    }catch(error){
-      console.log(error);
-    }
-    
-  };
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Logowanie </Text>
-
-      <TextInput
-        style={styles.input}
-        placeholder="Nazwa użytkownika"
-        value={username}
-        onChangeText={setUsername}
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Hasło"
-        value={password}
-        secureTextEntry
-        onChangeText={setPassword}
-      />
-
-      <Button title="Zaloguj" onPress={handleLogin} />
-    </View>
+  <NavigationContainer>
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

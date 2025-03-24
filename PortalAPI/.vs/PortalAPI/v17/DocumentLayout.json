@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\desktop\\portallogowanie-main\\portalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\desktop\\portallogowanie-main\\portalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\source\\repos\\portalapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|c:\\users\\kowal\\desktop\\portallogowanie-main\\portalapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{29505971-58D5-434C-8AEA-D0AD83C6F238}|PortalAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,26 +26,26 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T22:37:42.372Z",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T20:21:29.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-23T22:34:26.876Z",
               "EditorCaption": ""
@@ -54,11 +54,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAGsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T20:10:18.691Z",
               "EditorCaption": ""

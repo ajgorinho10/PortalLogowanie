@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kowal\\source\\repos\\PortalAPI\\PortalAPI.csproj": {}
+    "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\PortalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kowal\\source\\repos\\PortalAPI\\PortalAPI.csproj": {
+    "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\PortalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\PortalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\PortalAPI.csproj",
         "projectName": "PortalAPI",
-        "projectPath": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\PortalAPI.csproj",
+        "projectPath": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\PortalAPI.csproj",
         "packagesPath": "C:\\Users\\kowal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kowal\\source\\repos\\PortalAPI\\obj\\",
+        "outputPath": "C:\\Users\\kowal\\Desktop\\PortalLogowanie-main\\PortalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -101,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

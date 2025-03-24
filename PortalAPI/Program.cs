@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using PortalAPI.Data;
@@ -80,6 +81,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
 app.UseCors("AllowAll");
 //app.UseHttpsRedirection();
 app.UseCookiePolicy();
@@ -101,5 +107,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
+app.UseForwardedHeaders();
 app.MapControllers();
 app.Run();
