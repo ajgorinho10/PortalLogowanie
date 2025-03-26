@@ -61,3 +61,9 @@ export const getUserKey = async () => {
         return null;
     }
 };
+
+export const delUserKey = async()=>{
+      await SecureStore.setItemAsync('api_key', null, { secure: true });
+      await SecureStore.setItemAsync('login', null, { secure: true });
+      await SecureStore.setItemAsync('password', null, { secure: true });
+}

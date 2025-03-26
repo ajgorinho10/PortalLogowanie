@@ -30,6 +30,7 @@ export const loginApi = async (username,pass) => {
 
   } catch (error) {
       console.error("Error fetching user data:", error);
+      return "0";
   }
 
 };
