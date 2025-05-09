@@ -5,6 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
 import { getUserName,getUserPassword,getUserKey,delUserKey } from '../ApiRequest/RenewApiKey';
+import { Request } from '../ApiRequest/OtherReques';
 import { StatusBar } from 'react-native';
 
 const Button = styled.TouchableOpacity`
@@ -26,6 +27,8 @@ const Home = ({ navigation }) => {
     const [password, setPassword] = useState('');
     const [key, setKey] = useState('');
     const [id, setId] = useState('');
+    const [imie, setImie] = useState('');
+    const [nazwisko, setNazwisko] = useState('');
 
     useEffect(() => {
         getInfo();
@@ -36,6 +39,8 @@ const Home = ({ navigation }) => {
             const userName = await getUserName();
             const userPassword = await getUserPassword();
             const userKey = await getUserKey();
+            const infoFromApi = await Request();
+            console.log("info",infoFromApi);
             if (userName) {
                 setName(userName);
                 setPassword(userPassword);
@@ -43,6 +48,13 @@ const Home = ({ navigation }) => {
             } else {
                 setName("Brak użytkownika");
             }
+
+            if(infoFromApi){
+                setId(infoFromApi.data.id);
+                setImie(infoFromApi.data.firstName);
+                setNazwisko(infoFromApi.data.lastName);
+            }
+
         } catch (error) {
             console.error("Error fetching user name:", error);
         }
@@ -53,6 +65,21 @@ const Home = ({ navigation }) => {
             <Text style={[styles.text]}>Informacje o użytkowniku</Text>
 
         <View style={{flexDirection: 'column',justifyContent:'center',alignItems:'flex-start',marginTop:20,width:'80%'}}>
+            <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
+                <Text style={styles.text}>ID: </Text>
+                <Text>{id}</Text>
+            </View>
+
+            <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
+                <Text style={styles.text}>Imie: </Text>
+                <Text>{imie}</Text>
+            </View>
+
+            <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
+                <Text style={styles.text}>Nazwisko: </Text>
+                <Text>{nazwisko}</Text>
+            </View>
+
             <View style={{flexDirection: 'row',justifyContent:'center',alignItems:'center'}}>
                 <Text style={styles.text}>Urzytkownik: </Text>
                 <Text>{Name}</Text>

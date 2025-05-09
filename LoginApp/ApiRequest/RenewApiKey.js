@@ -21,7 +21,7 @@ export const renewApiKey = async () => {
         });
 
         if(response.data.success === true){
-            await SecureStore.setItemAsync('api_key', response.data.data, { secure: true });
+            await SecureStore.setItemAsync('api_key', response.data.token, { secure: true });
             return response.data.data;
         }else{
             return "0";
@@ -47,7 +47,7 @@ export const getUserPassword = async () => {
     if (username) {
         return username;
     } else {
-        console.error("Login not found in SecureStore");
+        console.error("Password not found in SecureStore");
         return null;
     }
 };
@@ -57,7 +57,7 @@ export const getUserKey = async () => {
     if (username) {
         return username;
     } else {
-        console.error("Login not found in SecureStore");
+        console.error("Key not found in SecureStore");
         return null;
     }
 };

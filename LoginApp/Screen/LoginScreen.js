@@ -49,7 +49,7 @@ const LoginScreen = ({ navigation,route}) => {
     const response = await loginApi(email, password);
     setIsLoading(false);
 
-    if(response == '0'){
+    if(response === 0){
       Alert.alert('Logowanie', 'Błędne dane logowania');
     }
     else{

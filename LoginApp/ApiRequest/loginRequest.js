@@ -3,7 +3,7 @@ import * as SecureStore from 'expo-secure-store';
 
 export const loginApi = async (username,pass) => {
 
-    const apiUrl = "https://api.fwapi.duckdns.org/User/login";
+    const apiUrl = "https://api.fwapi.duckdns.org/Auth/login";
 
     try {
       const requestData = {
@@ -20,17 +20,18 @@ export const loginApi = async (username,pass) => {
       });
 
       const odp = response.data;
+      //console.log("Odpowiedz logowanie",odp);
       if(odp.success === true){
-        await saveApiKey(odp.data,username,pass);
+        await saveApiKey(odp.token,username,pass);
         return odp.data;
       }
       else{
-        return "0";
+        return 0;
       }
 
   } catch (error) {
       console.error("Error fetching user data:", error);
-      return "0";
+      return 0;
   }
 
 };

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "oIlX0bVbE9P/G7dGWPpge55od91xdrz57bPKOJnZ9oI=",
+  "Source": "LogowanieAPI",
+  "BasePath": "_content/LogowanieAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

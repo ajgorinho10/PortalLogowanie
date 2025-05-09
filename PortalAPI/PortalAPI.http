@@ -1,6 +1,0 @@
-@PortalAPI_HostAddress = http://localhost:5273
-
-GET {{PortalAPI_HostAddress}}/api/User
-Accept: application/json
-
-###

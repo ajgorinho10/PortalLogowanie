@@ -1,8 +1,8 @@
 import React, { useState,useRef } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert,ActivityIndicator  } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert,ActivityIndicator,FlatList ,StyleSheet,KeyboardAvoidingView, StatusBar,ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import {KeyboardAvoidingScrollView} from 'react-native-keyboard-avoiding-scroll-view';
 
 import { registerApi } from "../ApiRequest/registerReques";
 
@@ -41,96 +41,139 @@ const ButtonText = styled.Text`
 
 export const SignUpScreen = ({navigation}) =>{
 
-      const [email, setEmail] = useState('');
+      const [login, setLogin] = useState('');
       const [password, setPassword] = useState('');
+      const [firstName, setfirstName] = useState('');
+      const [lastName, setlastName] = useState('');
+      const [confirmPassword, setconfirmPassword] = useState('');
+
+
       const [isLoading, setIsLoading] = useState(false);
 
       const[error,setError] = useState('');
 
-      const scrollViewRef = useRef(null);
-
-      const handleFocus = () => {
-        if (scrollViewRef.current) {
-          scrollViewRef.current.scrollToEnd({ animated: true });
-        }
-      };
-
       const handleLogin = async () => {
         setIsLoading(true);
-        const response = await registerApi(email, password);
+        const response = await registerApi(login, password,firstName,lastName,confirmPassword);
         setIsLoading(false);
     
         if(response.success == true){
-          setEmail('');
+          setLogin('');
           setPassword('');
           navigation.navigate('Login',{msg:"Utworzono użytkownika pomyślnie możesz się zalogować!"});
         }
         else{
-            setError(response.message);
+            setError(response.Data);
+            console.log(response.Data);
         }
       };
 
-    return(
-<KeyboardAwareScrollView style={{width:'100%', flex:1.0,backgroundColor:'#f5f5f5'}} contentContainerStyle={{justifyContent:'center',alignItems:'stretch',paddingVertical:50}} showsVerticalScrollIndicator={false}
-    ref={scrollViewRef} 
->
-    <Container>
-        <MaterialIcons name="add" size={80} color="#6200ea" style={{ marginBottom: 20 }} />
-        {(error==='Nie prawidłowe hasło')&&(
-            <View style={{borderRadius:20,backgroundColor: 'rgba(252, 0, 0, 0.51)',padding:10,width:'70%',justifyContent:'center',alignItems:'center',marginBottom:20,marginTop:-20}}>
-                <Text style={{color:"white",fontWeight:700,fontSize:16}}>{error}</Text>
-                <Text style={{color:"white",fontWeight:500,fontSize:14}}>Hasło powinno zawierać:</Text>
-                <View>
-                    <Text style={{color:"white",fontWeight:500,fontSize:14}}>min. 8 znaków</Text>
-                    <Text style={{color:"white",fontWeight:500,fontSize:14}}>min. 1 cyfre</Text>
-                    <Text style={{color:"white",fontWeight:500,fontSize:14}}>min. 1 duży znak</Text>
-                </View>
-            </View>
-        )}
-        {((error==='Nie prawidłowy login'))&&(
-            <View style={{borderRadius:20,backgroundColor: 'rgba(252, 0, 0, 0.51)',padding:10,width:'70%',justifyContent:'center',alignItems:'center',marginBottom:20,marginTop:-20}}>
-                <Text style={{color:"white",fontWeight:700,fontSize:16}}>{error}</Text>
-                <Text style={{color:"white",fontWeight:500,fontSize:14}}>Login powinien zawierać:</Text>
-                <Text style={{color:"white",fontWeight:500,fontSize:14}}>min. 8 znaków</Text>
-            </View>
-        )}
-        {((error==='Podany Login już istnieje'))&&(
-            <View style={{borderRadius:20,backgroundColor: 'rgba(252, 0, 0, 0.51)',padding:10,width:'70%',justifyContent:'center',alignItems:'center',marginBottom:20,marginTop:-20}}>
-                <Text style={{color:"white",fontWeight:700,fontSize:16}}>{error}</Text>
-            </View>
-        )}
-        <Input 
-            placeholder="Email"
-            keyboardType="email-address"
-            value={email}
-            onChangeText={setEmail}
-            onFocus={handleFocus}
-        />
-        <Input 
-            placeholder="Hasło"
-            secureTextEntry
-            value={password}
-            onChangeText={setPassword}
-            onFocus={handleFocus}
-        />
+      const ErrorInfo = ({ tablica }) => {
+        if (!tablica || tablica.length === 0) return null;
+      
+        return (
+          <View style={{ width: '100%' }}>
+            <FlatList
+              data={tablica}
+              keyExtractor={(item, index) => index.toString()}
+              renderItem={({ item }) => (
+                <Text style={styles.errorItem}>• {item}</Text>
+              )}
+            />
+          </View>
+        );
+      };
+
+      const RegisterButton = () =>{
+        return(
         <Button onPress={handleLogin}>
-        {isLoading ? (
+            {isLoading ? (
             <ActivityIndicator size="small" color="#fff" />
             ) : (
             <ButtonText>Zarejestruj się !</ButtonText>
             )}
         </Button>
+        );
+      };
+
+    return(
+    <Container>
+        <MaterialIcons name="add" size={80} color="#6200ea" style={{ marginBottom: 20 }} />
+        <KeyboardAvoidingView style={{width:'100%',flex:1,justifyContent:'center',alignItems:'center'}} behavior='padding'>
+        <FlatList
+        data={[{ id: '1'}]}
+        keyExtractor={(item) => item.id}
+        style={[{width:'100%'}]}
+        showsVerticalScrollIndicator={false}
+        renderItem={()=>(
+        <View style={[{width:'100%'}]}>
+            <ErrorInfo tablica={error?.FirstName} />
+            <Input 
+                placeholder="Imie"
+                keyboardType="email-address"
+                value={firstName}
+                onChangeText={setfirstName}
+            />
+
+            <ErrorInfo tablica={error?.LastName} />
+            <Input 
+                placeholder="Nazwisko"
+                keyboardType="email-address"
+                value={lastName}
+                onChangeText={setlastName}
+            />
+
+            <ErrorInfo tablica={error?.Login} />
+            <Input 
+                placeholder="Login"
+                keyboardType="email-address"
+                value={login}
+                onChangeText={setLogin}
+            />
+
+            <ErrorInfo tablica={error?.Password} />
+            <Input 
+                placeholder="Hasło"
+                secureTextEntry
+                value={password}
+                onChangeText={setPassword}
+            />
+
+            <ErrorInfo tablica={error?.ConfirmPassword} />
+            <Input 
+                placeholder="Potwiedź Hasło"
+                secureTextEntry
+                value={confirmPassword}
+                onChangeText={setconfirmPassword}
+            />    
+        </View>  
+        )}/>
+        <RegisterButton/>
+        </KeyboardAvoidingView>
 
         <View style={{width:'50%',paddingTop:150}}>
             <Button onPress={()=>{
             navigation.replace("Login");
             }}>
-            <ButtonText>Wyloguj się!</ButtonText>
+            <ButtonText>Zaloguj się!</ButtonText>
             </Button>
         </View>
 
     </Container>
-</KeyboardAwareScrollView>
     );
 
 };
+
+const styles = StyleSheet.create({
+  container: {
+    margin: 16,
+    padding: 12,
+    backgroundColor: '#ffe6e6',
+    borderRadius: 8,
+  },
+  errorItem: {
+    color: 'Black',
+    fontSize: 16,
+    marginVertical: 2,
+  },
+});
