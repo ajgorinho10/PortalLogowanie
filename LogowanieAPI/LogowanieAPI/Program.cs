@@ -9,10 +9,8 @@ using LogowanieAPI.Model.DTO.AuthDTO;
 using LogowanieAPI.SecurityAndValidation;
 using LogowanieAPI.Model.DTO;
 using LogowanieAPI.Exceptions;
-using LogowanieAPI.Controllers;
-using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc;
+using LogowanieAPI.SecurityAndValidation.Token;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,8 +29,9 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 builder.Services.AddScoped<IValidator<RegisterRequest>, RegisterRequestValidator>();
 builder.Services.AddScoped<IValidator<LoginRequest>, LoginRequestValidator>();
+builder.Services.AddScoped<TokenService>();
 
-
+builder.Services.AddTransient<ITokenService, TokenService>();
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -67,7 +66,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
@@ -75,6 +78,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero,
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
@@ -90,7 +94,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 context.Response.ContentType = "application/json";
                 var response = new ApiResponse<string>(false, "Nieprawidłowy token", context.Exception.Message);
 
-                throw new UnauthorizedAccessException("Invalid token", context.Exception);
+                throw new UnauthorizedAccessException("Token Expired", context.Exception);
             },
 
             OnChallenge = context =>
@@ -108,8 +112,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 context.Response.ContentType = "application/json";
                 var response = new ApiResponse<string>(false, "Brak dostępu", "Nie masz odpowiednich uprawnień.");
 
-                throw new UnauthorizedAccessException("Invalid token");
-            }
+                throw new UnauthorizedAccessException("Forbidden Content");
+            },
+            
         };
     });
 

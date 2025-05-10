@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "LogowanieAPI.Controllers.AuthController",
+    "Method": "Revoke",
+    "RelativePath": "Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogowanieAPI.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "Auth/register",
     "HttpMethod": "POST",
@@ -26,6 +36,22 @@
       {
         "Name": "input",
         "Type": "LogowanieAPI.Model.DTO.AuthDTO.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogowanieAPI.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "Auth/token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "LogowanieAPI.Model.DTO.AuthDTO.TokenRequest",
         "IsRequired": true
       }
     ],

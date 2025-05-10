@@ -16,6 +16,8 @@ namespace LogowanieAPI.Model
         public required string LastName {  get; set; }
         public required string Login { get; set; }
         public required string Password { get; set; }
+        public string? RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
 
         public User() { }
 
@@ -26,6 +28,16 @@ namespace LogowanieAPI.Model
             this.LastName = lastName;
             this.Login = login;
             this.Password = password;
+        }
+
+        public User(string firstName, string lastName, string login, string password,string refreshToken, DateTime refreshTokenExpiryTime)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Login = login;
+            this.Password = password;
+            this.RefreshToken = refreshToken;
+            RefreshTokenExpiryTime = refreshTokenExpiryTime;
         }
 
         [SetsRequiredMembers]
