@@ -1,6 +1,7 @@
 ﻿using LogowanieAPI.Model;
 using LogowanieAPI.Model.DTO.AuthDTO;
 using LogowanieAPI.SecurityAndValidation;
+using LogowanieAPI.Exceptions;
 
 
 using Microsoft.AspNetCore.Mvc;
@@ -21,19 +22,13 @@ namespace LogowanieAPI.Controllers
         private readonly ApplicationDbContext _context = context;
         private readonly ITokenService _tokenService = token;
 
-        private static readonly RegisterRequestValidator _registerRequestValidator = new();
+        private readonly RegisterRequestValidator _registerRequestValidator = new(context);
         private static readonly LoginRequestValidator _loginRequestValidator = new();
 
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterRequest input)
         {
-            _registerRequestValidator.ValidateAndThrow(input);
-
-            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Login == input.Login);
-            if (existingUser != null)
-            {
-                return Conflict(new AuthResponse(false, "Login already exists"));
-            }
+            await _registerRequestValidator.ValidateAndThrowAsync(input);
 
             var hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(input.Password);
             var newUser = new User(input)

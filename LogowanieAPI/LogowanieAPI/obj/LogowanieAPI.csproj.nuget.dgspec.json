@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj": {}
+    "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj": {
+    "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
+        "projectUniqueName": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
         "projectName": "LogowanieAPI",
-        "projectPath": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
+        "projectPath": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
         "packagesPath": "C:\\Users\\kowal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\obj\\",
+        "outputPath": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

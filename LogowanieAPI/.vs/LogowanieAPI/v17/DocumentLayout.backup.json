@@ -1,25 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\source\\repos\\logowanieapi\\logowanieapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\source\\repos\\logowanieapi\\logowanieapi\\securityandvalidation\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\securityandvalidation\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\source\\repos\\logowanieapi\\logowanieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\source\\repos\\logowanieapi\\logowanieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\securityandvalidation\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\securityandvalidation\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\exceptions\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\exceptions\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\securityandvalidation\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\securityandvalidation\\token\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\source\\repos\\logowanieapi\\logowanieapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|c:\\users\\kowal\\documents\\github\\portallogowanie\\logowanieapi\\logowanieapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{606C5E3B-01D5-48BD-BC51-C7BC507AC421}|LogowanieAPI\\LogowanieAPI.csproj|solutionrelative:logowanieapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -30,69 +38,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "LogowanieAPI\\SecurityAndValidation\\RegisterRequestValidator.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "LogowanieAPI\\SecurityAndValidation\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:38:58.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValidationFilter.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Exceptions\\ValidationFilter.cs",
+              "RelativeDocumentMoniker": "LogowanieAPI\\Exceptions\\ValidationFilter.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Exceptions\\ValidationFilter.cs",
+              "RelativeToolTip": "LogowanieAPI\\Exceptions\\ValidationFilter.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:34:01.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Program.cs",
               "RelativeDocumentMoniker": "LogowanieAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Program.cs",
               "RelativeToolTip": "LogowanieAPI\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAHIAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T18:38:34.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\appsettings.json",
               "RelativeDocumentMoniker": "LogowanieAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\appsettings.json",
               "RelativeToolTip": "LogowanieAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-10T18:18:22.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T18:18:22.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "LogowanieAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "LogowanieAPI\\Controllers\\UserController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:09:46.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T18:09:46.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
+              "RelativeDocumentMoniker": "LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
+              "RelativeToolTip": "LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:25:12.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
-              "RelativeDocumentMoniker": "LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
-              "RelativeToolTip": "LogowanieAPI\\SecurityAndValidation\\Token\\TokenService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T17:25:12.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "LogowanieAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "LogowanieAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwFUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAwwB4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T17:16:24.617Z",
               "EditorCaption": ""

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9XEs34xou4k=",
+  "dgSpecHash": "SfWOAFkIXVY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kowal\\source\\repos\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
+  "projectFilePath": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\LogowanieAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kowal\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\kowal\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

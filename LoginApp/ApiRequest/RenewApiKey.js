@@ -3,14 +3,15 @@ import * as SecureStore from 'expo-secure-store';
 
 export const renewApiKey = async () => {
     
-    const apiUrl = "https://api.fwapi.duckdns.org/User/login";
+    const apiUrl = "https://api.fwapi.duckdns.org/Auth/token";
 
     try{
-        const login = await SecureStore.getItemAsync('login');
-        const password = await SecureStore.getItemAsync('password');
+        const token = await getUserKey();
+        const refresh = await getRefreshKey();
+
         const requestData = {
-            login: login,
-            password: password
+            accessToken: token,
+            refreshToken: refresh
         };
 
         const response = await axios.post(apiUrl, requestData, {
@@ -20,14 +21,17 @@ export const renewApiKey = async () => {
             },
         });
 
-        if(response.data.success === true){
+        if(response.status === 200){
+            console.log("nowy Token",response.data.token);
             await SecureStore.setItemAsync('api_key', response.data.token, { secure: true });
-            return response.data.data;
+            return true;
         }else{
-            return "0";
+            delUserKey();
+            return false;
         }
 
     }catch(error){
+        delUserKey();
         console.error("Error fetching user data:", error);
     }
 };
@@ -62,8 +66,19 @@ export const getUserKey = async () => {
     }
 };
 
+export const getRefreshKey = async () => {
+    const username = await SecureStore.getItemAsync('refresh_token');
+    if (username) {
+        return username;
+    } else {
+        console.error("Key not found in SecureStore");
+        return null;
+    }
+};
+
 export const delUserKey = async()=>{
       await SecureStore.setItemAsync('api_key', null, { secure: true });
       await SecureStore.setItemAsync('login', null, { secure: true });
       await SecureStore.setItemAsync('password', null, { secure: true });
+      await SecureStore.setItemAsync('refresh_token', null, { secure: true });
 }

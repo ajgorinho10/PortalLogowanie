@@ -1,11 +1,12 @@
 ﻿using FluentValidation;
 using LogowanieAPI.Model.DTO.AuthDTO;
+using Microsoft.EntityFrameworkCore;
 
 namespace LogowanieAPI.SecurityAndValidation
 {
     public class RegisterRequestValidator : AbstractValidator<RegisterRequest>
     {
-        public RegisterRequestValidator()
+        public RegisterRequestValidator(ApplicationDbContext context)
         {
             RuleFor(x => x.FirstName)
                 .NotEmpty().WithMessage("Imię jest wymagane")
@@ -17,7 +18,18 @@ namespace LogowanieAPI.SecurityAndValidation
 
             RuleFor(x => x.Login)
                 .NotEmpty().WithMessage("Login jest wymagany")
-                .MinimumLength(4).WithMessage("Login musi mieć co najmniej 4 znaki");
+                .MinimumLength(4).WithMessage("Login musi mieć co najmniej 4 znaki").
+                MustAsync(async (login, cancellation) =>
+                {
+                    var exists = await context.Users.FirstOrDefaultAsync(u => u.Login == login);
+                    if (exists != null)
+                    {
+                        return false;
+                    }
+                    
+                    return true;
+                })
+            .WithMessage("Login jest już zajęty");
 
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Hasło jest wymagane")

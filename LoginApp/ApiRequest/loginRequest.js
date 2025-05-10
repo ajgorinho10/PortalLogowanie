@@ -22,7 +22,7 @@ export const loginApi = async (username,pass) => {
       const odp = response.data;
       //console.log("Odpowiedz logowanie",odp);
       if(odp.success === true){
-        await saveApiKey(odp.token,username,pass);
+        await saveApiKey(odp,username,pass);
         return odp.data;
       }
       else{
@@ -37,7 +37,8 @@ export const loginApi = async (username,pass) => {
 };
 
 async function saveApiKey(apiKey,name,pass) {
-  await SecureStore.setItemAsync('api_key', apiKey, { secure: true });
+  await SecureStore.setItemAsync('api_key', apiKey.token, { secure: true });
+  await SecureStore.setItemAsync('refresh_token',apiKey.refreshToken, { secure: true })
   await SecureStore.setItemAsync('login', name, { secure: true });
   await SecureStore.setItemAsync('password', pass, { secure: true });
 }

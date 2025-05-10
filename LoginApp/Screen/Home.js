@@ -5,6 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
 import { getUserName,getUserPassword,getUserKey,delUserKey } from '../ApiRequest/RenewApiKey';
+import { logOutRequest } from '../ApiRequest/LogoutRequest';
 import { Request } from '../ApiRequest/OtherReques';
 import { StatusBar } from 'react-native';
 
@@ -60,6 +61,25 @@ const Home = ({ navigation }) => {
         }
     };
 
+    const getInfo2 = async ()=>{
+        const infoFromApi = await Request();
+        const userKey = await getUserKey();
+
+            if(infoFromApi){
+                setKey(userKey);
+                setId(infoFromApi.data.id);
+                setImie(infoFromApi.data.firstName);
+                setNazwisko(infoFromApi.data.lastName);
+                console.log("Pobrano dane");
+            }
+    };
+
+    const logout = async () => {
+        const result = await logOutRequest();
+        delUserKey();
+        navigation.replace("Login");
+    };
+
     return (
         <View style={[styles.container,{paddingTop:StatusBar.currentHeight}]}>
             <Text style={[styles.text]}>Informacje o użytkowniku</Text>
@@ -98,8 +118,15 @@ const Home = ({ navigation }) => {
 
         <View style={{width:'50%',paddingTop:20}}>
             <Button onPress={()=>{
-            delUserKey();
-            navigation.replace("Login");
+                getInfo2();
+            }}>
+            <ButtonText>Ponów Zapytanie</ButtonText>
+            </Button>
+        </View>
+
+        <View style={{width:'50%',paddingTop:20}}>
+            <Button onPress={()=>{
+                logout();
             }}>
             <ButtonText>Wyloguj się!</ButtonText>
             </Button>

@@ -1,32 +1,31 @@
 import axios from "axios";
 import { getUserKey,renewApiKey } from "./RenewApiKey";
 
-const apiUrl = "https://api.fwapi.duckdns.org/User";
+const apiUrl = "https://api.fwapi.duckdns.org/Auth/logout";
 
-export const Request = async () => {
+export const logOutRequest = async () => {
 
     try{
 
         const token = await getUserKey();
-        const response = await axios.get(apiUrl, {
+        const response = await axios.post(apiUrl, null,{
             headers: {
-              "accept": "text/plain",
               "Authorization": `Bearer ${token}`
             },
           });
 
         
-        return response.data;
+        return;
     }catch(error){
-        console.log("Token wygasł");
+        console.log("Token wygasł",error?.response?.data);
         const response = await renewApiKey();
         if(response == true){
           console.log("uzyskano nowy token");
-          return await Request();
-        }
-        else{
-          console.log("Błąd nowy token");
-          return null;
+          return await logOutRequest();
+       }
+       else{
+         console.log("Błąd nowy token");
+         return null;
         }
     }
 };
