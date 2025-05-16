@@ -50,8 +50,7 @@
               "RelativeToolTip": "LogowanieAPI\\SecurityAndValidation\\RegisterRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T19:38:58.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T19:38:58.601Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "LogowanieAPI\\Exceptions\\ValidationFilter.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T19:34:01.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T19:34:01.381Z"
             },
             {
               "$type": "Document",
@@ -74,7 +72,7 @@
               "RelativeDocumentMoniker": "LogowanieAPI\\Program.cs",
               "ToolTip": "C:\\Users\\kowal\\Documents\\GitHub\\PortalLogowanie\\LogowanieAPI\\LogowanieAPI\\Program.cs",
               "RelativeToolTip": "LogowanieAPI\\Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGYAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T18:38:34.015Z",
               "EditorCaption": ""
@@ -125,8 +123,7 @@
               "RelativeToolTip": "LogowanieAPI\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAwwB4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T17:16:24.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T17:16:24.617Z"
             }
           ]
         }
